@@ -1,19 +1,19 @@
 const CACHE_NAME = "greenbite-cache-v1"; 
 const urlsToCache = [
   // HTML
-  "Index.html",       
-  "Recipes.html",     
-  "Calculator.html",  
-  "Workout.html", 
-  "Mindfulness.html",
-  "Contact.html", 
+  "index.html",       
+  "recipes.html",     
+  "calculator.html",  
+  "workout.html", 
+  "mindfulness.html",
+  "contact.html", 
 
   // CSS
   "/CSS/index_style.css",
   "/CSS/cal_style.css",
   "/CSS/contact_style.css",
   "/CSS/mind_style.css",
-  "/CSS/Recipes_style.css",
+  "/CSS/recipes_style.css",
   "/CSS/workout_style.css",
   "/CSS/reset_style.css",
   "/CSS/footer.css",
@@ -32,9 +32,10 @@ const urlsToCache = [
   "/java_script/mind.js",
 
   // Manifest + icons
-  "/other/manifest.json",
-  "/Images/192_icon.png",
-  "/Images/512_icon.png",
+  "manifest.json",
+  "192_icon.png",
+  "512_icon.png",
+  "facicon.png",
 ];
 
 // Install event (runs once when browser installs the Service Worker)
