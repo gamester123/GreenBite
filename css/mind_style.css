@@ -1,0 +1,271 @@
+body {
+  background: radial-gradient(rgb(6, 9, 34),rgb(10, 10, 42) 100%);
+  color: #e0f7ff;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+/* Grid overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: grid-bg 20s linear infinite;
+}
+@keyframes grid-bg {
+  from { background-position: 0 0; }
+  to { background-position: 60px 60px; }
+}
+main {
+  padding-bottom: 80px;
+}
+
+.page-header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0a0f1f, #141a33);
+}
+
+/* ===== Section General ===== */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* ===== Neon Button ===== */
+.btn {
+  background: transparent;
+  border: 2px solid #00ffe7;
+  color: #00ffe7;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0,255,231,0.4);
+  margin: 12px; /* uniform gap around buttons */
+}
+.btn:hover, .btn.active {
+  background: #00ffe7;
+  color:#0a0f1f;
+  box-shadow:0 0 25px #00ffe7;
+}
+
+/* ===== Breathing Halo ===== */
+.ripple-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 40px auto 80px auto; /* more space around circle and bottom */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ring {
+  position: absolute;
+  width: 100%;height:100%;
+  border: 4px solid #00ffe7;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(0,255,231,0.8);
+  transform: scale(1);
+  transition: transform 4s ease-in-out, opacity 4s ease-in-out;
+}
+/* inhale */
+.ripple-container.inhale .ring {
+  transform: scale(1.1);
+}
+/* exhale */
+.ripple-container.exhale .ring {
+  transform: scale(0.85);
+}
+
+
+#breathing-text {
+  position:absolute;
+  bottom:-70px;
+  width:100%;
+  text-align:center;
+  font-size:1.4rem;
+  font-weight:bold;
+  color:#00ffe7;
+  text-shadow:0 0 12px #00ffe7;
+}
+#start-breathing {
+  margin-top: 30px;
+}
+
+/* ===== Timer Section ===== */
+.timer-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.timer-card {
+  background: rgba(255,255,255,0.04);
+  border: 2px solid #00ffe7;
+  border-radius: 14px;
+  padding: 30px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0,255,231,0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Futuristic scan-line background overlay */
+.timer-card::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right:0; bottom:0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0,255,231,0.05) 0px,
+    rgba(0,255,231,0.05) 2px,
+    transparent 3px
+  );
+  pointer-events: none;
+  animation: scan-fade 8s linear infinite;
+}
+@keyframes scan-fade {
+  from { background-position: 0 0; }
+  to { background-position: 0 20px; }
+}
+
+.timer-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg,#00ffe7,#0099ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px #00ffe7;
+}
+
+/* Input styled as neon console */
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+.input-wrapper label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #b0f5ff;
+  text-shadow:0 0 8px #00ffe7;
+}
+.input-wrapper input[type="number"] {
+  width: 180px;
+  padding: 14px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+  border: 2px solid #00ffe7;
+  background: rgba(0,0,0,0.85);
+  color: #00ffe7;
+  box-shadow: inset 0 0 12px rgba(0,255,231,0.3),
+              0 0 18px rgba(0,255,231,0.25);
+  outline: none;
+}
+
+/* Timer Display */
+.timer-display {
+  border-top: 1px solid rgba(0,255,231,0.4);
+  margin-top: 20px;
+  padding-top: 15px;
+}
+.timer-display p {
+  font-size: 2.6rem;
+  margin: 0;
+  color: #00ffe7;
+  text-shadow: 0 0 15px #00ffe7;
+  font-weight: bold;
+}
+
+/* ===== Sound Section ===== */
+.sound-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.sound-card {
+  background: rgba(255,255,255,0.04);
+  border: 2px solid #00ffe7;
+  border-radius: 14px;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0,255,231,0.2);
+  position: relative;
+}
+
+.sound-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg,#00ffe7,#0099ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px #00ffe7;
+}
+
+.sound-desc {
+  color: #b0f5ff;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  opacity: 0.8;
+}
+
+.sound-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Neon Pads for Sound Buttons */
+.sound-btn {
+  background: rgba(0,0,0,0.6);
+  border: 2px solid #00ffe7;
+  color: #00ffe7;
+  padding: 16px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0,255,231,0.3);
+  min-width: 120px;
+  font-size: 1rem;
+}
+
+.sound-btn:hover {
+  background: #00ffe7;
+  color: #0a0f1f;
+  box-shadow: 0 0 25px #00ffe7;
+}
+
+/* Active Toggle State */
+.sound-btn.active {
+  background: linear-gradient(135deg,#00ffe7,#0099ff);
+  border-color: #0099ff;
+  color: #0a0f1f;
+  box-shadow: 0 0 35px #00ffe7, inset 0 0 15px #0099ff;
+  animation: pulse-glow 1.5s infinite;
+}
+
+/* Soft glowing pulse when active */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 25px #00ffe7, inset 0 0 10px #0099ff; }
+  50% { box-shadow: 0 0 40px #0099ff, inset 0 0 20px #00ffe7; }
+}

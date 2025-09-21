@@ -1,0 +1,195 @@
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #0a0d24;
+      color: #eee;
+    }
+
+    /* glowing futuristic grid effect */
+    .page-header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: grid-move 20s linear infinite;
+      z-index: 0;
+    }
+    @keyframes grid-move {
+      from { background-position: 0 0; }
+      to { background-position: 60px 60px; }
+    }
+
+
+    /* ===== HEADER ===== */
+    .page-header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #0a0f1f, #141a33);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(270deg, #ffffff, #b0f5ff, #00eaff, #00ffe7, #0099ff, #ffffff);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      animation: gradient-move 12s ease infinite;
+      text-shadow: 0 0 25px rgba(0, 255, 231, 0.6);
+    }
+
+    .page-header p {
+      color: #b0f5ff;
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    @keyframes gradient-move {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ===== FORM SECTION ===== */
+    .calculator-section {
+      padding: 40px 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    form fieldset {
+      border: 2px solid #00ffe7;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 0 20px rgba(0, 255, 231, 0.2);
+    }
+
+    form legend h2 mark {
+      background: transparent;
+      color: #00ffe7;
+      font-size: 1.4rem;
+      text-shadow: 0 0 10px rgba(0, 255, 231, 0.8);
+    }
+
+    form label {
+      display: block;
+      margin-top: 16px;
+      font-weight: 500;
+      color: #b0f5ff;
+    }
+
+    form input,
+    form select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 8px;
+      border: 1px solid #00ffe7;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    form input:focus,
+    form select:focus {
+      outline: none;
+      border-color: #00eaff;
+      box-shadow: 0 0 15px rgba(0, 255, 231, 0.6);
+    }
+
+    .container .btn {
+      margin-top: 20px;
+      padding: 12px 28px;
+    }
+
+  
+    /* ===== RESULT SECTION ===== */
+
+.results-section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.results-section h2 {
+  font-size: 2.2rem;
+  color: #00ffe7;
+  text-shadow: 0 0 15px rgba(0, 255, 231, 0.7);
+  margin-bottom: 40px;
+}
+
+/* Result Boxes */
+.result-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 25px;
+  border: 2px solid rgba(0, 255, 231, 0.3);
+  box-shadow: 0 0 20px rgba(0, 255, 231, 0.2);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(0, 255, 231, 0.6);
+}
+
+.result-box h3 {
+  color: #b0f5ff;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  text-shadow: 0 0 8px rgba(0, 255, 231, 0.6);
+}
+
+/* Text inside results */
+.result-box p,
+.result-box li {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.result-box strong {
+  color: #b0f5ff;
+}
+
+/* Highlighted numbers */
+.results-section span {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #00ffe7;
+  text-shadow: 0 0 12px rgba(0, 255, 231, 0.8);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.results-section span.updated {
+  color: #b0f5ff;
+  text-shadow: 0 0 15px rgba(176, 245, 255, 0.9);
+}
+
+/* Remove default list style */
+.result-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .page-header h1 {
+        font-size: 2rem;
+      }
+      .results-section h2 {
+        font-size: 1.6rem;
+      }
+    }

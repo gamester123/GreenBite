@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" content="#00ffe7">
+  <title>GreenBite | Calorie Calculator</title>
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="stylesheet" href="./css/reset_style.css">
+  <link rel="stylesheet" href="./css/general.css">
+  <link rel="stylesheet" href="./css/nav.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/cal_style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo" href="index.html">
+        <img src="./Images/greenbite_logo.png" alt="GreenBite Logo" /></a>
+      <ul class="nav-links" id="primary-menu">
+        <li><h3><a href="index.html">Home</a></h3></li>
+        <li><h3><a href="recipes.html">Healthy Recipes</a></h3></li>
+        <li><h3><a href="calculator.html">Calorie Calculator</a></h3></li>
+        <li><h3><a href="workout.html">Workout Generator</a></h3></li>
+        <li><h3><a href="mindfulness.html">Mindfulness</a></h3></li>
+        <li><h3><a href="contact.html">Contact</a></h3></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Calorie & Nutrition Calculator</h1>
+        <p>Calculate your daily calorie needs and macronutrient breakdown.</p>
+      </div>
+    </section>
+
+    <section class="calculator-section">
+      <div class="container">
+        <form>
+          <fieldset>
+            <legend><h2><mark>Personal Information</mark></h2></legend>
+            <label for="age">Age (years):</label>
+            <input type="number" id="age" name="age" min="1" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+              <option value="">Select gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height" min="50" required>
+
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" min="20" required>
+
+            <label for="activity">Activity Level:</label>
+            <select id="activity" name="activity" required>
+              <option value="">Select activity level</option>
+              <option value="1.2">Sedentary - Little or no exercise</option>
+              <option value="1.375">Lightly active - Light exercise 1–3 days/week</option>
+              <option value="1.55">Moderately active - 3–5 days/week</option>
+              <option value="1.725">Very active - 6–7 days/week</option>
+              <option value="1.9">Super active - Very hard exercise</option>
+            </select>
+          </fieldset>
+          <button type="submit" class="btn">Calculate</button>
+        </form>
+      </div>
+    </section>
+
+<section class="results-section">
+  <div class="container">
+    <h2>Your Results</h2>
+
+    <div class="result-box">
+      <p><strong>BMR (Basal Metabolic Rate):</strong> <span id="bmr-result">--</span> kcal/day</p>
+      <p><strong>TDEE (Maintenance Calories):</strong> <span id="tdee-result">--</span> kcal/day</p>
+    </div>
+
+    <div class="result-box">
+      <h3>Calorie Goals</h3>
+      <ul>
+        <li><strong>Maintenance:</strong> <span id="maintain-result">--</span> kcal/day</li>
+        <li><strong>Weight Loss (~500 kcal deficit):</strong> <span id="loss-result">--</span> kcal/day</li>
+        <li><strong>Weight Gain (~500 kcal surplus):</strong> <span id="gain-result">--</span> kcal/day</li>
+      </ul>
+    </div>
+
+    <div class="result-box">
+      <h3>Macronutrient Breakdown (per day)</h3>
+      <ul>
+        <li>Carbs (50%): <span id="carbs-result">--</span> g</li>
+        <li>Protein (20%): <span id="protein-result">--</span> g</li>
+        <li>Fat (30%): <span id="fat-result">--</span> g</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-container">
+      
+      <!-- Footer Links -->
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Healthy Recipes</a></li>
+          <li><a href="calculator.html">Calorie Calculator</a></li>
+          <li><a href="workout.html">Workout Generator</a></li>
+          <li><a href="mindfulness.html">Mindfulness</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Newsletter Form -->
+      <div class="newsletter">
+        <h3>Subscribe to our Newsletter</h3>
+        <form id="newsletter-form">
+          <label for="newsletter-email" class="sr-only">Email</label>
+          <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+        <p id="newsletter-message" class="message"></p>
+      </div>
+
+      <!-- Copyright -->
+      <p class="copyright">&copy; 2025 GreenBite. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./java_script/navbar.js"></script>
+  <script src="./java_script/cal.js"></script>
+  <script src="./java_script/footer.js"></script>
+  <script src="./java_script/common.js"></script>
+
+</body>
+</html>

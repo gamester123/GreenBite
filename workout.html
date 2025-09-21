@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="theme-color" content="#00ffe7">
+  <title>GreenBite | Workout Generator</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="./css/reset_style.css">
+  <link rel="stylesheet" href="./css/general.css">
+  <link rel="stylesheet" href="./css/nav.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/workout_style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo" href="index.html">
+        <img src="./Images/greenbite_logo.png" alt="GreenBite Logo" /></a>
+      <ul class="nav-links" id="primary-menu">
+        <li><h3><a href="index.html">Home</a></h3></li>
+        <li><h3><a href="recipes.html">Healthy Recipes</a></h3></li>
+        <li><h3><a href="calculator.html">Calorie Calculator</a></h3></li>
+        <li><h3><a href="workout.html">Workout Generator</a></h3></li>
+        <li><h3><a href="mindfulness.html">Mindfulness</a></h3></li>
+        <li><h3><a href="contact.html">Contact</a></h3></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HEADER -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Workout Generator</h1>
+        <p>Select your preferences and get a custom workout plan.</p>
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="workout-form-section">
+      <div class="container">
+        <form>
+          <fieldset>
+            <legend><h2><mark> Workout Preferences</mark></h2></legend>
+            <label for="body-part">Body Part:</label>
+            <select id="body-part" name="body-part" required>
+              <option value="">Select body part</option>
+              <option value="full">Full Body</option>
+              <option value="arms">Arms</option>
+              <option value="legs">Legs</option>
+              <option value="core">Core</option>
+            </select>
+
+            <label for="equipment">Equipment:</label>
+            <select id="equipment" name="equipment" required>
+              <option value="">Select equipment</option>
+              <option value="none">None</option>
+              <option value="dumbbells">Dumbbells</option>
+              <option value="resistance-band">Resistance Band</option>
+            </select>
+          </fieldset>
+          <button type="submit" class="btn"><span>Generate Workout</span></button>
+        </form>
+      </div>
+    </section>
+
+<!-- ===== RESULTS ===== -->
+    <section class="workout-results">
+      <div class="container">
+        <h2>Your Workout Plan</h2>
+        <p id="workout-status">⚡ Waiting for your workout preferences...</p>
+        <!-- JS injects workout cards here -->
+        <div class="workout-grid" id="workout-plan"></div>
+        <!-- Timer will appear when an exercise starts -->
+        <div id="timer"></div>
+      </div>
+    </section>
+  </main>
+
+<!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-container">
+      
+      <!-- Footer Links -->
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links">
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="Recipes.html">Healthy Recipes</a></li>
+          <li><a href="Calculator.html">Calorie Calculator</a></li>
+          <li><a href="Workout.html">Workout Generator</a></li>
+          <li><a href="Mindfulness.html">Mindfulness</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Newsletter Form -->
+      <div class="newsletter">
+        <h3>Subscribe to our Newsletter</h3>
+        <form id="newsletter-form">
+          <label for="newsletter-email" class="sr-only">Email</label>
+          <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+        <p id="newsletter-message" class="message"></p>
+      </div>
+
+      <!-- Copyright -->
+      <p class="copyright">&copy; 2025 GreenBite. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./java_script/navbar.js"></script>
+  <script src="./java_script/workout.js"></script>
+  <script src="./java_script/footer.js"></script>
+  <script src="./java_script/common.js"></script>
+
+</body>
+</html>
