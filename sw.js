@@ -8,6 +8,11 @@ const urlsToCache = [
   "mindfulness.html",
   "contact.html", 
 
+  // CSS
+  "./CSS/index_style.css",
+  "./CSS/cal_style.css",
+  "./CSS/contact_style.css",
+  "./CSS/mind_style.css",
 
 
   //JS
