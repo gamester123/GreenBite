@@ -9,11 +9,12 @@ const urlsToCache = [
   "contact.html", 
 
   // CSS
-  "./CSS/index_style.css",
-  "./CSS/cal_style.css",
-  "./CSS/contact_style.css",
-  "./CSS/mind_style.css",
-
+  "./CSS/recipes_style.css",
+  "./CSS/workout_style.css",
+  "./CSS/reset_style.css",
+  "./CSS/footer.css",
+  "./CSS/nav.css",
+  "./CSS/general.css",
 
   //JS
   "./java_script/cal.js",
