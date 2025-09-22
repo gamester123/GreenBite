@@ -18,13 +18,13 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px; /* space between logo image and text (if text is included) */
+  gap: 8px; 
   text-decoration: none;
 }
 
 .logo img {
-  height: 80px;  /* adjust logo height */
-  width: auto;   /* keep aspect ratio */
+  height: 80px;  
+  width: auto;   
 }
 
 .nav-links {
@@ -38,7 +38,7 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: #2D7D7D;
+  color: #86fbfb;
   font-weight: 500;
   transition: .2s
 }

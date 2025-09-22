@@ -27,7 +27,7 @@ const recipes = [
     id: 2,
     title: "Porridge with Banana",
     category: "breakfast",
-    image: "Images/banana porridge.webp",
+    image: "Images/banana_porridge.webp",
     shortDesc: "Warm oatmeal topped with sliced banana.",
     description:
       "Oats with milk or water make a cheap, healthy breakfast. Natural sweetness from banana instead of sugar.",
@@ -48,7 +48,7 @@ const recipes = [
     id: 3,
     title: "Grilled Chicken Salad",
     category: "lunch",
-    image: "Images/chicken salad.jpg",
+    image: "Images/chicken_salad.jpg",
     shortDesc: "Chicken breast served with mixed salad greens.",
     description:
       "A very common healthy lunch: lean chicken breast with crisp vegetables and light dressing.",
@@ -70,7 +70,7 @@ const recipes = [
     id: 4,
     title: "Rice and Mixed Vegetables",
     category: "lunch",
-    image: "Images/mixed rice.avif",
+    image: "Images/mixed_rice.avif",
     shortDesc: "Steamed rice with sautéed or boiled vegetables.",
     description:
       "Plain rice with mixed veggies is one of the most common healthy meals eaten worldwide.",
@@ -93,7 +93,7 @@ const recipes = [
     id: 5,
     title: "Baked Fish with Vegetables",
     category: "dinner",
-    image: "Images/baked fish.jpg",
+    image: "Images/baked_fish.jpg",
     shortDesc: "Fish fillet baked with carrots, beans, and zucchini.",
     description:
       "Fish baked in the oven with vegetables — a quick, common, and very healthy dinner worldwide.",
@@ -140,7 +140,7 @@ const recipes = [
     id: 7,
     title: "Fruit Salad",
     category: "snacks",
-    image: "Images/fruit salad.jpg",
+    image: "Images/fruit_salad.jpg",
     shortDesc: "Mixed seasonal fruits in a bowl.",
     description:
       "The simplest and most common healthy snack across cultures: a bowl of fresh fruits.",
@@ -160,7 +160,7 @@ const recipes = [
     id: 8,
     title: "Fruit Smoothie",
     category: "snacks",
-    image: "Images/fruit smoothie.jpg",
+    image: "Images/fruit_smoothie.jpg",
     shortDesc: "Refreshing blended smoothie with banana and berries.",
     description:
       "Fruit smoothies are a popular healthy snack worldwide. They’re quick to prepare, naturally sweet, and packed with vitamins and fiber.",
