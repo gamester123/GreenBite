@@ -1,6 +1,6 @@
 body {
   background: radial-gradient(rgb(6, 9, 34),rgb(10, 10, 42) 100%);
-  color: #93e4ff;
+  color: #00f7ff;
   margin: 0;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
@@ -40,8 +40,8 @@ section {
 /* ===== Neon Button ===== */
 .btn {
   background: transparent;
-  border: 2px solid #eaf9f7;
-  color: #cafffa;
+  border: 2px solid #00f7ff;
+  color: #00f7ff;
   padding: 12px 26px;
   border-radius: 8px;
   font-weight: bold;
