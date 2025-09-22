@@ -8,19 +8,18 @@ const urlsToCache = [
   "mindfulness.html",
   "contact.html", 
 
-  // CSS
-  "./CSS/index_style.css",
-  "./CSS/cal_style.css",
-  "./CSS/contact_style.css",
-  "./CSS/mind_style.css",
-  "./CSS/recipes_style.css",
-  "./CSS/workout_style.css",
-  "./CSS/reset_style.css",
-  "./CSS/footer.css",
-  "./CSS/nav.css",
-  "./CSS/general.css",
 
 
+  //JS
+  "./java_script/cal.js",
+  "./java_script/common.js",
+  "./java_script/contact.js",
+  "./java_script/footer.js",
+  "./java_script/index.js",
+  "./java_script/navbar.js",
+  "./java_script/Recipes.js",
+  "./java_script/workout.js",
+  "./java_script/mind.js",
 
   // Manifest + icons
   "manifest.json",
